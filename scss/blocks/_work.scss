@@ -1,0 +1,229 @@
+.work {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+
+        background: url(/img/Mask.png);
+        background-size: 100% 100%;
+
+        width: 100%;
+        height: 460px;
+
+        left: 0;
+
+        z-index: -1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+
+        background: url(/img/workbitmap.png);
+        background-size: 100% 100%;
+
+        width: 40%;
+        height: 400px;
+
+        left: 0;
+        top: -20px;
+        z-index: -1;
+    }
+    &__text {
+        padding: 80px 0;
+        display: flex;
+        flex-direction: column;
+
+        &__tittle {
+            font-family: 'DM Serif Display';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px;
+            line-height: 56px;
+            
+            letter-spacing: -0.369231px;
+            
+            color: #FBFCFE;
+        }
+        &__description {
+            font-size: 15px;
+            line-height: 28px;
+            
+            color: #FBFCFE;
+            
+            mix-blend-mode: normal;
+            opacity: 0.7;
+            
+            padding-top: 20px;
+            
+            width: 450px;
+        }
+        &__link {
+            @include displayFlex(flex, center, center);
+            width: 100px;
+
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 18px;
+            text-decoration: none;
+
+            padding: 8px 16px;
+            margin-top: 30px;
+
+            text-align: center;
+            letter-spacing: -0.115385px;
+            
+            color: #FBFCFE;
+            border: 1px solid #FBFCFE;
+            border-radius: 24px;
+            &:hover {
+                background: rgb(124, 119, 119);
+                color: #f6f9fc;
+                ;
+            }
+            &:active {
+                background: #fff;
+                color: #1B262F;
+                ;
+            }
+        }
+    }
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-right: 80px;
+        
+        &__images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            width: 500px;
+            height: 120px;
+        }
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .work {
+        display: flex;
+        flex-direction: column-reverse;
+        
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+    
+            background: url(/img/Mask.png);
+            background-size: 100% 100%;
+    
+            width: 100%;
+            height: 90vh;
+    
+            top: 0;
+            left: 0;
+    
+            z-index: -1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+    
+            background: url(/img/tablet.png) no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            width: 100%;
+            height: 40vh;
+
+            z-index: -1;
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            &__description {
+                font-size: 15px;
+                line-height: 28px;
+                
+                color: #FBFCFE;
+                
+                mix-blend-mode: normal;
+                opacity: 0.7;
+    
+                width: 450px;
+            }
+        }
+        &__block {
+            padding-top: 150px;
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .work {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+    
+            background: url(/img/Mask.png);
+            background-size: 100% 100%;
+    
+            width: 100%;
+            height: 100vh;
+    
+            z-index: -1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+    
+            background: url(/img/workmobileBitmap.png);
+            background-size: 100% 100%;
+    
+            width: 100%;
+            height: 250px;
+    
+            top: -20px;
+            z-index: -1;
+        }
+        &__text {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            &__tittle {
+                font-size: 36px;
+                line-height: 36px;
+                
+                letter-spacing: -0.369231px;
+            }
+            &__description {
+                font-size: 15px;
+                line-height: 28px;
+
+                padding: 0 40px;
+                padding-top: 20px;
+
+                text-align: inherit;
+            }
+            &__link {
+                padding: 18px 30px;
+                width: 130px;
+            }
+        }
+        &__block {
+            padding: 80px 40px;            
+            &__images {
+                height: 220px;
+            }
+        }
+    }    
+}

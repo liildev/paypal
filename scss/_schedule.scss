@@ -1,0 +1,26 @@
+.schedule {
+    z-index: 1;
+
+    @include displayFlex(flex, center, center);
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: none;
+    
+    letter-spacing: -0.115385px;
+
+    padding: 12px 20px;
+    
+    color: #FBFCFE;
+    &--btn {
+        background: #BA4270;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        border-radius: 24px;
+    }
+    &:active {
+        background: #DA6D97;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    }
+}
